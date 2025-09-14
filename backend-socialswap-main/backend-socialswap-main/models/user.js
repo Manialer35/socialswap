@@ -1,4 +1,6 @@
-// models/user.js
+firebaseUid: { type: String, index: true, sparse: true },
+provider: { type: String, enum: ['local','google','firebase','phone'], default: 'local' }
+
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
